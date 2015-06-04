@@ -1,0 +1,149 @@
+/* Put any additional CSS here */
+
+    .lvl{
+        color: #034AAE;
+        font-family: Geneva, Arial, Helvetica, san-serif;
+        font-size: medium;
+    }
+
+    .user_input{
+        margin-left: 300px;
+        margin-top: 40px;
+        padding: 29px;
+    }
+
+    #t_sum{
+        margin-left: 30px;
+    }
+
+    #activityID{
+        width: auto;
+        margin: 4px;
+        margin-left: 65px; 
+        display:inline;
+        font-family: monospace;
+        font-size: 15px;
+    }
+
+    #energy_level{
+        margin: 4px;
+        margin-bottom: 5px;
+        margin-left: 32px;
+        width: 225px;
+        display:inline;
+    }
+    #energy_level:focus{
+    	background-color: #C3DCFF;
+    }
+
+    #stress_level{
+         margin: 4px;
+        margin-bottom: 5px;
+        margin-left: 36px;
+        width: 225px;
+        display:inline;
+    }
+    #stress_level:focus{
+    	background-color: #C3DCFF;
+    }
+
+    #happiness_level{
+         margin: 4px;
+        margin-bottom: 5px;
+        margin-left: 7px;
+        width: 225px;
+        display:inline;
+    }
+    #happiness_level:focus{
+    	background-color: #C3DCFF;
+    }
+
+    #time_spent{
+        margin: 4px;
+        margin-bottom: 5px;
+        margin-left: 37px;
+        width: 225px;
+        display:inline;
+    }
+    #time_spent:focus{
+    	background-color: #C3DCFF;
+    }
+
+
+    #time{
+        margin-left: 10px;
+        margin-bottom: 90px;
+        padding: 9px;
+    }
+
+    #table_view{
+
+        margin-right: 405px;
+        margin-left: 305px;
+    }
+
+    #graph_view{
+         margin-left: 190px;
+    }
+
+    #graph_view2{
+
+    }
+
+    #radio_sum_div{
+    	font-family: Arial;
+    	font-size: 15px;
+    	color: gray;
+    }
+
+    #submit_button{
+        margin-left: 400px;
+        margin-top: 20px;
+        cursor: pointer;
+    }
+
+    #submit_button:hover{
+    	background: #C3DCFF;
+    }
+
+    #plot_button{
+        margin-left: 150px;
+    }
+
+    #tbl_sum:hover, 
+    #grph_sum:hover,
+    #grph_sum_lvl:hover{
+    	font-size: 26px;
+    	cursor: pointer;
+    }
+
+    #canvas_div{
+       
+    }
+
+    #canvas_bar2{
+
+    }
+
+
+
+    #view-div{
+        clear: both;
+    }
+
+    table {
+        width: 300px;
+        font-family: Geneva, Arial, Helvetica, san-serif;
+        font-size: 17px;
+    }
+
+    th {
+    	font-family: cursive;
+    	font-size: 20px;
+    	font-weight: 300;
+    }
+
+    #unit-tests{
+        clear: both;
+    }
+

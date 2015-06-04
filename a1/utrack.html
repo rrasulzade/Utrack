@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>UTrack!</title>
+    <link rel="stylesheet" href="css/ext/bootstrap.css"/>
+    <link rel="stylesheet" href="css/utrack.css"/>
+</head>
+
+
+<style type="text/css">
+
+
+</style>
+
+<body>
+
+    <div id="app-container" class="container">
+
+        <header>
+            <h1>UTrack! <small>Track and analyze data that matters to you!</small></h1>
+        </header>
+        <div id="nav_div">
+            <!-- For the usages of row and col classes, refer to Bootstrap API -->
+            <div class="row">
+                <div class="col-sm-8 col-sm-offset-2">
+                    <ul class="nav nav-tabs nav-justified">
+                        <li id="nav-input-tab" class="active"><a href="#input">Input</a></li>                
+                        <li id="nav-analysis-tab"><a href="#analysis">Analysis</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div id="input-div">
+          <!--  <h2>Input Data</h2> -->
+            <!-- Put HTML here to support user input of data -->
+            <div class="user_input">
+                <form id="activity_form">
+                    <span class="lvl"> Activity </span>
+                    <select class="form-control" id="activityID">
+                        <option value="w_c"> writing code       </option>
+                        <option value="e_d"> eating dinner      </option>
+                        <option value="p_s"> playing sports     </option>
+                        <option value="s_e"> studying for exams </option>
+                        <option value="a_l"> attending lecture  </option>
+                        <option value="w_t"> watching tv        </option>
+                    </select>
+                    <br>
+                    <span class="lvl"> Energy level </span>
+                    <input id="energy_level" class="form-control" type="number" min="1" max="5" placeholder="(1=exhausted, 5=very awake)">
+                    <br>
+                    <span class="lvl"> Stress level </span>
+                    <input id="stress_level" class="form-control" type="number" min="1" max="5" placeholder="(1=very stressed, 5=very relaxed)">
+                    <br>
+                    <span class="lvl"> Happiness level </span>
+                    <input id="happiness_level" class="form-control" type="number" min="1" max="5" placeholder="(1=depressed, 5=very happy)" >
+                    <br>
+                    <span class="lvl"> Time spent </span>
+                    <input id="time_spent" class="form-control" type="number" min="0"  max="2000" placeholder="minutes">
+                    <br>
+                    <input type="submit" id="submit_button" class="btn btn-primary"> 
+                    <p id="time"> </p>
+                    <br>
+                </form>
+            </div>
+        </div>
+
+        <div id="analysis-div" class="hidden">
+          <!--  <h2>Analysis</h2> -->
+            <!-- Put HTML here to support users in analyzing their data -->
+            <br>
+            <div id="radio_views" >
+                <h3> Views: </h3> 
+                <form id="t_sum">
+                    <div id="radio_sum_div">
+                        <div class="radio">
+                            <input type="radio" name="view" value="table_sum" id="tbl_sum" checked> Table Summary 
+                        </div>
+                        <div class="radio">
+                            <input type="radio" name="view" value="graph_sum" id="grph_sum" > Bar Graph (time spent)
+                        </div>
+                        <div class="radio">
+                            <input type="radio" name="view" value="graph_sum_lvl" id="grph_sum_lvl" > Scatterplot
+                        </div>
+                    </div>
+                </form> 
+            </div> 
+
+            <div id="table_view"> 
+
+                <table id="activityTable" class="table-hover table" ></table>
+            </div>
+
+            <div id="graph_view" class="hidden">
+
+                <div id="canvas_div" align="center">
+                    <canvas id="canvas_bar" >
+                    </canvas>
+                </div>
+            </div>
+
+            <div id="graph_view2" class="hidden"> 
+
+                <div id="canvas_div2" align="center">
+                    <canvas id="canvas_bar2">
+                    </canvas>
+                </div>
+
+                <div id="view-div">
+                    <h3 id="graph_h3"> Customize: </h3> 
+                    <form id="chckbox" >
+                        <div class="checkbox">
+                            <label> <input type="checkbox" id="energyBox" name="energy" value="energy_level">  Energy level &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;o </label>
+                        </div>
+                        <div class="checkbox">
+                            <label> <input type="checkbox" id="stressBox" name="energy" value="stress_level">  Stress level &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; x </label>
+                        </div>
+                        <div class="checkbox">
+                            <label> <input type="checkbox" id="happyBox" name="energy" value="happy_level">  Happiness level &nbsp;&nbsp;&nbsp;&nbsp;+ </label>
+                        </div>
+                        <input type="submit" id="plot_button" class="btn btn-primary" value="Plot"> 
+                    </form>    
+                </div>
+
+
+               
+            </div>
+        </div>
+        
+  
+
+    <footer>
+        <div id="unit-tests">
+            <!-- Keep this here so TAs can run your unit tests -->
+            <a href="unit_tests.html">Run Unit Tests</a>
+        </div>
+    </footer>
+
+</div>
+
+<script src="js/ext/underscore.js"></script>
+<script src="js/model.js"></script>
+<script src="js/view.js"></script>
+<script src="js/utrack.js"></script>
+</body>
+</html>
